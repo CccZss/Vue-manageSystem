@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <nav1></nav1>
+    <tag></tag>
     <div>
         <options class="option"></options>
         <transition name="slide-fade">
@@ -16,17 +17,22 @@
 <script>
 import nav1 from 'components/demo/nav1'
 import options from 'components/demo/options'
+import tag from 'components/demo/tag'
 
 export default {
     name: 'app',
     data: function(){
         return{
-
+            
         }
     },
     components: {
         nav1,
         options,
+        tag,
+    },
+    methods: {
+
     }
 }
 </script>

@@ -1,15 +1,16 @@
 <template>
 	<div>
 		<ul class="options">
-	      <router-link :to="One" tag="li" exact>One</router-link>
-	      <router-link :to="Home" tag="li" exact>Home</router-link>
+	      <i @click="select(One)"><router-link :to="One" tag="li" exact  >One</router-link></i>
+	      <i @click="select(Home)"><router-link :to="Home" tag="li" exact >Home</router-link></i>
 	    </ul>
 	</div>
 </template>
 
 <script>
+import{ mapState,mapActions } from 'vuex'
+
 export default {
-	name: 'option',
 	data(){
         return{
             Home:{
@@ -26,6 +27,12 @@ export default {
             },
         }
     },
+	methods: {
+		select(tag){
+			this.addTag(tag)
+		},
+		...mapActions(['addTag'])
+	}
 }
 </script>
 
