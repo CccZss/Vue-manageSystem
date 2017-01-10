@@ -1,6 +1,7 @@
 <template>
-	<div class='one'>
-		<h1>这里是One</h1>
+	<div class='home'>
+		<h1>这里是HOME</h1>
+		<p><slot></slot></p>
 	</div>
 </template>
 
@@ -13,9 +14,8 @@
   }
 </script>
 
-<style>
-	.one{
-		padding: 50px;
-		background-color: #ffd4d4;
+<style scoped>
+	.home{
+		background-color: #bcdaf7;
 	}
 </style>

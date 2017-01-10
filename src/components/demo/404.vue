@@ -1,6 +1,7 @@
 <template>
-	<div class='one'>
+	<div class="no-find">
 		<p>404</p>
+		<p><slot></slot></p>
 	</div>
 </template>
 
@@ -13,11 +14,9 @@
   }
 </script>
 
-<style>
-	.one{
-		padding: 50px;
-	}
-	p{
+<style scoped>
+	.no-find{
 		font-size: 40px;
+		background-color: #ececec;
 	}
 </style>

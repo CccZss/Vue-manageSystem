@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router.js'
-import nav1 from './components/nav1'
 
 new Vue({
   router,

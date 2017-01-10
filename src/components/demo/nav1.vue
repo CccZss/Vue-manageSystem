@@ -10,26 +10,23 @@
 </template>
 
 <script>
-import router from '../router.js'
+
 export default {
-  	name: 'nav1',
 	data: function(){
 		return {
-			userName: '131',
+			userName: '111',
             headImg: require("assets/logo.png"),
 		}
 	},
 	methods: {
 		bind: function(){
-			 my_alert('该功能尚未完成!')
+			 alert('该功能尚未完成!')
 		},
 		close: function(){
-			$.get("/anywork/user/signout",function(data){
-				window.location.href="login.html";
-			},'json');
+			alert('close')
 		},
 		toHomePage: function(){
-			router.push({ path: 'home' })
+			this.$router.push({ path: 'home' }) //已经在根组件注册了
 		},
 		stopP: function(e){
 			e.stopPropagation();
@@ -65,10 +62,11 @@ export default {
     }
     #nav .page-logo{
         display: inline-block;
-        width: 30.5rem;
+        width: 15%;
         height: 5.8rem;
         background: url(~assets/logo.png) no-repeat;
-        background-position-x: 1.7rem;
+        background-position-x: 46%;
+        background-size: contain;
         cursor: pointer;
         background-color: #2283c8;
     }
@@ -78,12 +76,12 @@ export default {
         cursor: pointer;
     }
     #nav .close-logo{
-        background: url(../assets/logo.png) no-repeat center center;
+        background: url(~assets/logo.png) no-repeat center center;
         background-size: contain;
         cursor: pointer;
     }
     #nav .back-logo{
-        background: url(../assets/logo.png) no-repeat center center;
+        background: url(~assets/logo.png) no-repeat center center;
         background-size: contain;
         cursor: pointer;
     }

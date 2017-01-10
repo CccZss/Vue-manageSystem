@@ -1,62 +1,54 @@
 <template>
   <div id="app">
     <nav1></nav1>
-    <Home></Home>
-    <ul>
-      <router-link :to="One" tag="li" exact>One</router-link>
-      <router-link :to="Home" tag="li" exact>Home</router-link>
-    </ul>
-    <p>{{$route.params}}</p>
-    <transition name="slide-fade">
-        <router-view class="view"></router-view>
-    </transition>
+    <div>
+        <options class="option"></options>
+        <transition name="slide-fade">
+            <router-view class="view">
+                <p>{{$route.params}}</p>   
+            </router-view>
+        </transition>
+    </div>
+    
   </div>
 </template>
 
 <script>
-import nav1 from './components/nav1'
-import Home from './components/Home'
+import nav1 from 'components/demo/nav1'
+import options from 'components/demo/options'
 
 export default {
     name: 'app',
     data: function(){
         return{
-            Home:{
-                name:'home',
-                params: { 
-                    userId: 123,
-                },
-            },
-            One:{
-                name:"one",
-                params: { 
-                    oneId: 123 
-                },
-            },
+
         }
     },
     components: {
         nav1,
-        Home
+        options,
     }
 }
 </script>
 
-<style>
+<style scope>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   text-align: center;
 }
-li{
-  display: inline-block;
-  margin: 0 20px;
-  cursor: pointer;
+.option{
+    float: left;
+    height: 100%;
+    width: 15%;
+    background-color: white;
 }
-.u-link--Active{
-  font-size: 30px;
+li{
+    text-align: center;
+    list-style:none;
+    cursor: pointer;
 }
 
-.slide-fade-enter-active ,.slide-fade-leave-active {
+/* .slide-fade-enter-active ,.slide-fade-leave-active {
     position: absolute;
     left: 0;
     right: 0;
@@ -70,8 +62,11 @@ li{
     position: inherit;
     right: 2200px;
     opacity: 0;
-}
+} */
 .view{
-    margin-top: 50px;
+    float: left;
+    width: 85%;
+    height: 800px;
+    padding-top: 20px;
 }
 </style>

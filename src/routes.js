@@ -3,9 +3,9 @@ const routes = [
   {
     path: '/',
     meta: {
-      title: 'nav1'
+      title: 'Home'
     },
-    component: require('./components/Hello.vue')
+    component: require('components/demo/Home.vue')
   },
   {
     name: 'home',
@@ -13,7 +13,7 @@ const routes = [
     meta: {
       title: 'Home'
     },
-    component: require('./components/Home.vue')
+    component: require('components/demo/Home.vue')
   },
   {
     name: 'one',
@@ -22,14 +22,14 @@ const routes = [
       title: 'One',
       requiresAuth: true,
     },
-    component: require('./components/One.vue'),
+    component: require('components/demo/One.vue'),
   },
   {
     path: '*',
     meta: {
       title: '404'
     },
-    component: require('./components/404.vue'),
+    component: require('components/demo/404.vue'),
   },
 ]
 
