@@ -1,7 +1,7 @@
 <template>
 	<div class='home'>
 		<h1>这里是HOME</h1>
-		<p><slot></slot></p>
+		<slot></slot>
 	</div>
 </template>
 

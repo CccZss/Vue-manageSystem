@@ -1,8 +1,8 @@
 <template>
 	<div>
 		<ul class="options">
-	      <i @click="select(One)"><router-link :to="One" tag="li" exact  >One</router-link></i>
-	      <i @click="select(Home)"><router-link :to="Home" tag="li" exact >Home</router-link></i>
+	      <router-link :to="One" tag="li" exact @click.native="select(One)">One</router-link>
+	      <router-link :to="Home" tag="li" exact  @click.native="select(Home)">Home</router-link>
 	    </ul>
 	</div>
 </template>
