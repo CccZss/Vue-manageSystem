@@ -1,14 +1,17 @@
 <template>
   <div id="app">
     <nav1></nav1>
-    <tag></tag>
     <div>
         <options class="option"></options>
-        <transition name="slide-fade">
-            <router-view class="view">
-                <p>{{$route.params}}</p>   
-            </router-view>
-        </transition>
+        <div class="wrap">
+            <tag></tag>
+            <transition name="slide-fade">
+                <router-view class="view">
+                    <p>{{$route.params}}</p>   
+                </router-view>
+            </transition>
+        </div>
+       
     </div>
     
   </div>
@@ -32,7 +35,7 @@ export default {
         tag,
     },
     methods: {
-
+        
     }
 }
 </script>
@@ -44,9 +47,14 @@ export default {
 }
 .option{
     float: left;
-    height: 100%;
+    height: 830px;
     width: 15%;
+    border-right: 1px solid black;
     background-color: white;
+}
+.wrap{
+    float: left;
+    width: 84%;
 }
 li{
     text-align: center;
@@ -70,9 +78,7 @@ li{
     opacity: 0;
 } */
 .view{
-    float: left;
-    width: 85%;
-    height: 800px;
     padding-top: 20px;
+    height: 800px;
 }
 </style>

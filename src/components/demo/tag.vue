@@ -1,9 +1,9 @@
 <template>
 	<ul>
-		<p class="tag" v-for="(tag,index) in tags" >
+		<div class="tag" v-for="(tag,index) in tags" >
 			<router-link :to="tag" tag="li" exact>{{tag.name}}</router-link>
 			<i @click="deleteTag(index)">X</i>
-		</p>
+		</div>
 	</ul>
 </template>
 
@@ -28,11 +28,14 @@ export default{
 </script>
 
 <style scoped>
+	.u-link--Active{
+		background-color: blue;
+	}
 	ul{
 		text-align: left;
 	}
 	.tag{
-		width: 8%;
+		width: 10%;
 		display: inline-block;
 		border: 1px solid black;
 	}
